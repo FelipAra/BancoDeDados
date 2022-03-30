@@ -73,3 +73,12 @@ DELETE FROM Usuarios WHERE IdUsuario = 3
 SELECT P.NomePersonagem, C.Nome AS 'Nome da Classe', C.Descricao FROM Personagens AS P
 INNER JOIN Classes AS C
 ON P.IdClasse = C.IdClasse
+
+CREATE LOGIN Player
+WITH PASSWORD = 'a1s2d3a'
+
+CREATE USER Player FOR LOGIN Player
+
+GRANT SELECT TO Player 
+
+SELECT * FROM Personagens
