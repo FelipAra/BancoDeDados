@@ -64,11 +64,12 @@ SELECT * FROM Habilidades
 SELECT * FROM Personagens
 SELECT * FROM ClasseHabilidade
 
-SELECT * FROM Personagens
-INNER JOIN Classes
-ON Personagens.IdClasse = Classes.IdClasse
+--AO3
+INSERT INTO Usuarios VALUES('Rpg2@gmail.com', '123459')
+SELECT * FROM Usuarios
+UPDATE Usuarios SET Email = 'Rpmg3@gmail.com', Senha = '789456'
+DELETE FROM Usuarios WHERE IdUsuario = 3
 
 SELECT P.NomePersonagem, C.Nome AS 'Nome da Classe', C.Descricao FROM Personagens AS P
 INNER JOIN Classes AS C
 ON P.IdClasse = C.IdClasse
-
